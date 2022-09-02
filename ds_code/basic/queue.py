@@ -12,13 +12,19 @@ class Queue:
         return self.items == []
 
     def enqueue(self, item):
-        self.items.insert(0,item)
+        self.items.append(item)
 
     def dequeue(self):
-        return self.items.pop()
+        return self.items.pop(0)
 
     def size(self):
         return len(self.items)
     
     def __str__(self):
         return str(self.items)
+
+if __name__=="__main__":
+    s = Queue([1,2,3,4])
+    print(s)
+    s.enqueue(5)
+    print(s)

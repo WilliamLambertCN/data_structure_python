@@ -5,8 +5,8 @@
 #queue.py
 
 class Queue:
-    def __init__(self):
-        self.items = []
+    def __init__(self,items=[]):
+        self.items = items
 
     def isEmpty(self):
         return self.items == []
@@ -19,3 +19,6 @@ class Queue:
 
     def size(self):
         return len(self.items)
+    
+    def __str__(self):
+        return str(self.items)
